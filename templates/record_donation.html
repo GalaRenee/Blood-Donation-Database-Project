@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Record Donation</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="form-container">
+    <h2>Record Donation</h2>
+    <form method="POST">
+        <input type="number" name="donor_id" placeholder="Donor ID" required>
+        <input type="text" name="date" placeholder="Date (YYYY-MM-DD)" required>
+        <input type="number" name="quantity_ml" placeholder="Quantity (ml)" required>
+        <button type="submit">Record</button>
+    </form>
+    <a href="/">⬅ Back</a>
+</div>
+</body>
+</html>

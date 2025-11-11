@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Blood Donation Manager</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1> Blood Donation Manager</h1>
+        <div class="stats">
+            <p><strong>Total Donors:</strong> {{ donors }}</p>
+            <p><strong>Total Donations:</strong> {{ donations }}</p>
+            <p><strong>Total Requests:</strong> {{ requests }}</p>
+        </div>
+        <nav>
+            <a href="/add_donor"> Add Donor</a>
+            <a href="/record_donation"> Record Donation</a>
+            <a href="/make_request"> Make Request</a>
+            <a href="/search"> Search Donors</a>
+        </nav>
+    </div>
+</body>
+</html>

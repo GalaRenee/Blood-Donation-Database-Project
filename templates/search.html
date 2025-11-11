@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Search Donors</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+<div class="form-container">
+    <h2>Search Donors</h2>
+    <form method="POST">
+        <input type="text" name="blood_group" placeholder="Enter Blood Group (e.g., O+)" required>
+        <button type="submit">Search</button>
+    </form>
+    <a href="/">⬅ Back</a>
+
+    {% if results %}
+        <table>
+            <tr>
+                <th>ID</th><th>Name</th><th>Age</th><th>Gender</th><th>Blood Group</th><th>City</th>
+            </tr>
+            {% for r in results %}
+            <tr>
+                <td>{{ r[0] }}</td><td>{{ r[1] }}</td><td>{{ r[2] }}</td><td>{{ r[3] }}</td><td>{{ r[4] }}</td><td>{{ r[6] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+    {% endif %}
+</div>
+</body>
+</html>
